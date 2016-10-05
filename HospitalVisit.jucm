@@ -1,51 +1,180 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fm="http:///fm.ecore" xmlns:grl="http:///grl.ecore" xmlns:ucm.map="http:///ucm/map.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="Admin" created="September 29, 2016 6:00:13 PM EDT" modified="October 5, 2016 12:48:59 PM EDT" specVersion="16" urnVersion="1.27" nextGlobalID="1953">
+<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fm="http:///fm.ecore" xmlns:grl="http:///grl.ecore" xmlns:ucm.map="http:///ucm/map.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="Admin" created="September 29, 2016 6:00:13 PM EDT" modified="October 5, 2016 1:41:28 PM EDT" specVersion="18" urnVersion="1.27" nextGlobalID="1956">
   <ucmspec>
-    <scenarioGroups name="ScenarioGroup7" id="7">
+    <scenarioGroups name="Hospital Visit Scenarios" id="7">
       <scenarios name="ScenarioDef8" id="8"/>
     </scenarioGroups>
   </ucmspec>
   <grlspec>
-    <intElements xsi:type="fm:Feature" name="Hospital Visit" id="13" linksDest="46 49 51 53 61" type="Task" refs="14"/>
-    <intElements xsi:type="fm:Feature" name="Appointment" id="15" linksDest="1417 1418 1419 1420" linksSrc="46" type="Task" decompositionType="Or" refs="24"/>
-    <intElements xsi:type="fm:Feature" name="Emergency" id="17" linksDest="70 71" linksSrc="49" type="Task" decompositionType="Xor" refs="18"/>
-    <intElements xsi:type="fm:Feature" name="Admission" id="19" linksSrc="51" type="Task" refs="20"/>
-    <intElements xsi:type="fm:Feature" name="Walk In" id="21" linksSrc="53" type="Task" refs="22"/>
-    <intElements xsi:type="fm:Feature" name="Surgery" id="29" linksSrc="1418 1628 1634" type="Task" refs="30 1494"/>
-    <intElements xsi:type="fm:Feature" name="Consultation" id="31" linksSrc="1417 1627 1635" type="Task" refs="32 1412"/>
-    <intElements xsi:type="fm:Feature" name="Diagnostics" id="33" linksSrc="1419 1629 1633" type="Task" refs="34 1558"/>
-    <intElements xsi:type="fm:Feature" name="Pharmacy" id="55" linksSrc="61" type="Task" refs="56"/>
-    <intElements xsi:type="fm:Feature" name="Hospitalize" id="64" linksSrc="70 1948" type="Task" refs="65 1861"/>
-    <intElements xsi:type="fm:Feature" name="Release" id="66" linksSrc="71 1949" type="Task" refs="67 1943"/>
-    <intElements xsi:type="fm:Feature" name="Feature73" id="73" type="Task"/>
-    <intElements name="Better healthcare" id="87" linksDest="134 135 136 137 138" type="Goal" refs="88"/>
-    <intElements name="Minimize waiting time" id="89" linksDest="125 126" linksSrc="134" type="Goal" refs="90"/>
-    <intElements name="Well-equiped medical equipments" id="91" linksDest="124 127" linksSrc="135" type="Goal" refs="92"/>
-    <intElements name="Increase chance of being admitted" id="93" linksDest="123 128" linksSrc="136" type="Goal" refs="94"/>
-    <intElements name="Reduce treatment cost" id="95" linksDest="122 129 130 132" linksSrc="137 1639" type="Goal" refs="96"/>
-    <intElements name="More personalized care" id="97" linksDest="131 133" linksSrc="138" type="Goal" refs="98"/>
-    <intElements name="Receive treatment" id="101" linksDest="119 120 191" type="Goal" decompositionType="Or" refs="102"/>
-    <intElements name="Admit to hospital" id="103" linksDest="117 118 193" type="Goal" decompositionType="Or" refs="104"/>
-    <intElements name="Public hospital" id="107" linksSrc="119 126 127 128 129" type="Task" refs="108"/>
-    <intElements name="Private hospital" id="109" linksSrc="120 122 123 124 125" type="Task" refs="110"/>
-    <intElements name="Shared room" id="111" linksSrc="117 130 131" type="Task" refs="112"/>
-    <intElements name="Private room" id="113" linksSrc="118 132 133" type="Task" refs="114"/>
-    <intElements name="Earn income" id="144" linksDest="178 179 184 1632 1633 1634 1635 1639 1952" type="Goal" refs="145"/>
-    <intElements name="Improve healthcare" id="146" linksDest="180 182 183 1951" type="Goal" refs="147"/>
-    <intElements name="Treat patients" id="148" linksDest="1627 1628 1629 1630" linksSrc="178 180 191" type="Goal" decompositionType="Or" refs="149"/>
-    <intElements name="Administer hospital" id="150" linksDest="174 175 176" linksSrc="179" type="Goal" decompositionType="Or" refs="151"/>
-    <intElements name="Administer admission" id="162" linksSrc="174 184 193" type="Task" refs="163"/>
-    <intElements name="Improve facilities" id="164" linksSrc="175 183" type="Task" refs="165"/>
-    <intElements name="Maintain hospital" id="166" linksSrc="176 182" type="Task" refs="167"/>
-    <intElements xsi:type="fm:Feature" name="Prescription" id="1413" linksSrc="1420 1630 1632" type="Task" refs="1414 1626"/>
-    <intElements name="Respond to Emergency" id="1648" linksDest="1948 1949" linksSrc="1951 1952" type="Goal" decompositionType="Xor" refs="1649"/>
-    <actors name="Patient" id="83" contRefs="84"/>
-    <actors name="Doctor" id="140" contRefs="141"/>
-    <links xsi:type="fm:MandatoryFMLink" name="Mandatory46" id="46" refs="//@urndef/@specDiagrams.2/@connections.0" dest="13" src="15"/>
-    <links xsi:type="fm:MandatoryFMLink" name="Mandatory49" id="49" refs="//@urndef/@specDiagrams.2/@connections.1" dest="13" src="17"/>
-    <links xsi:type="fm:OptionalFMLink" name="Optional51" id="51" refs="//@urndef/@specDiagrams.2/@connections.2" dest="13" src="19"/>
-    <links xsi:type="fm:OptionalFMLink" name="Optional53" id="53" refs="//@urndef/@specDiagrams.2/@connections.3" dest="13" src="21"/>
-    <links xsi:type="fm:OptionalFMLink" name="Optional61" id="61" refs="//@urndef/@specDiagrams.2/@connections.4" dest="13" src="55"/>
+    <intElements xsi:type="fm:Feature" name="Hospital Visit" id="13" linksDest="46 49 51 53 61" type="Task" refs="14">
+      <metadata name="_numEval" value="100"/>
+      <metadata name="_qualEval" value="Satisfied"/>
+    </intElements>
+    <intElements xsi:type="fm:Feature" name="Appointment" id="15" linksDest="1417 1418 1419 1420" linksSrc="46" type="Task" decompositionType="Or" refs="24">
+      <metadata name="_addAggregate" value="disable"/>
+      <metadata name="_numEval" value="100"/>
+      <metadata name="_qualEval" value="Satisfied"/>
+    </intElements>
+    <intElements xsi:type="fm:Feature" name="Emergency" id="17" linksDest="70 71" linksSrc="49" type="Task" decompositionType="Xor" refs="18">
+      <metadata name="_addAggregate" value="disable"/>
+      <metadata name="_numEval" value="100"/>
+      <metadata name="_qualEval" value="Satisfied"/>
+    </intElements>
+    <intElements xsi:type="fm:Feature" name="Admission" id="19" linksSrc="51" type="Task" refs="20">
+      <metadata name="_addAggregate" value="disable"/>
+      <metadata name="_numEval" value="100"/>
+      <metadata name="_qualEval" value="Satisfied"/>
+    </intElements>
+    <intElements xsi:type="fm:Feature" name="Walk In" id="21" linksSrc="53" type="Task" refs="22">
+      <metadata name="_addAggregate" value="disable"/>
+      <metadata name="_numEval" value="0"/>
+      <metadata name="_qualEval" value="None"/>
+    </intElements>
+    <intElements xsi:type="fm:Feature" name="Surgery" id="29" linksSrc="1418 1628 1634" type="Task" refs="30 1494">
+      <metadata name="_addAggregate" value="disable"/>
+      <metadata name="_numEval" value="100"/>
+      <metadata name="_qualEval" value="Satisfied"/>
+    </intElements>
+    <intElements xsi:type="fm:Feature" name="Consultation" id="31" linksSrc="1417 1627 1635" type="Task" refs="32 1412">
+      <metadata name="_addAggregate" value="disable"/>
+      <metadata name="_numEval" value="0"/>
+      <metadata name="_qualEval" value="None"/>
+    </intElements>
+    <intElements xsi:type="fm:Feature" name="Diagnostics" id="33" linksSrc="1419 1629 1633" type="Task" refs="34 1558">
+      <metadata name="_addAggregate" value="disable"/>
+      <metadata name="_numEval" value="100"/>
+      <metadata name="_qualEval" value="Satisfied"/>
+    </intElements>
+    <intElements xsi:type="fm:Feature" name="Pharmacy" id="55" linksSrc="61" type="Task" refs="56">
+      <metadata name="_addAggregate" value="disable"/>
+      <metadata name="_numEval" value="0"/>
+      <metadata name="_qualEval" value="None"/>
+    </intElements>
+    <intElements xsi:type="fm:Feature" name="Hospitalize" id="64" linksSrc="70 1948" type="Task" refs="65 1861">
+      <metadata name="_numEval" value="100"/>
+      <metadata name="_qualEval" value="Satisfied"/>
+    </intElements>
+    <intElements xsi:type="fm:Feature" name="Release" id="66" linksSrc="71 1949" type="Task" refs="67 1943">
+      <metadata name="_numEval" value="0"/>
+      <metadata name="_qualEval" value="None"/>
+    </intElements>
+    <intElements xsi:type="fm:Feature" name="Feature73" id="73" type="Task">
+      <metadata name="_numEval" value="0"/>
+      <metadata name="_qualEval" value="None"/>
+    </intElements>
+    <intElements name="Better healthcare" id="87" linksDest="134 135 136 137 138" type="Goal" importance="High" importanceQuantitative="100" refs="88">
+      <metadata name="_numEval" value="0"/>
+      <metadata name="_qualEval" value="None"/>
+    </intElements>
+    <intElements name="Minimize waiting time" id="89" linksDest="125 126" linksSrc="134" type="Goal" refs="90">
+      <metadata name="_addAggregate" value="disable"/>
+      <metadata name="_numEval" value="0"/>
+      <metadata name="_qualEval" value="None"/>
+    </intElements>
+    <intElements name="Well-equiped medical equipments" id="91" linksDest="124 127" linksSrc="135" type="Goal" refs="92">
+      <metadata name="_addAggregate" value="disable"/>
+      <metadata name="_numEval" value="0"/>
+      <metadata name="_qualEval" value="None"/>
+    </intElements>
+    <intElements name="Increase chance of being admitted" id="93" linksDest="123 128" linksSrc="136" type="Goal" refs="94">
+      <metadata name="_addAggregate" value="disable"/>
+      <metadata name="_numEval" value="0"/>
+      <metadata name="_qualEval" value="None"/>
+    </intElements>
+    <intElements name="Reduce treatment cost" id="95" linksDest="122 129 130 132" linksSrc="137 1639" type="Goal" refs="96">
+      <metadata name="_addAggregate" value="disable"/>
+      <metadata name="_numEval" value="0"/>
+      <metadata name="_qualEval" value="None"/>
+    </intElements>
+    <intElements name="More personalized care" id="97" linksDest="131 133" linksSrc="138" type="Goal" refs="98">
+      <metadata name="_addAggregate" value="disable"/>
+      <metadata name="_numEval" value="0"/>
+      <metadata name="_qualEval" value="None"/>
+    </intElements>
+    <intElements name="Receive treatment" id="101" linksDest="119 120 191" type="Goal" decompositionType="Or" refs="102">
+      <metadata name="_numEval" value="0"/>
+      <metadata name="_qualEval" value="None"/>
+    </intElements>
+    <intElements name="Admit to hospital" id="103" linksDest="117 118 193" type="Goal" decompositionType="Or" refs="104">
+      <metadata name="_numEval" value="0"/>
+      <metadata name="_qualEval" value="None"/>
+    </intElements>
+    <intElements name="Public hospital" id="107" linksSrc="119 126 127 128 129" type="Task" refs="108">
+      <metadata name="_addAggregate" value="disable"/>
+      <metadata name="_numEval" value="0"/>
+      <metadata name="_qualEval" value="None"/>
+    </intElements>
+    <intElements name="Private hospital" id="109" linksSrc="120 122 123 124 125" type="Task" refs="110">
+      <metadata name="_addAggregate" value="disable"/>
+      <metadata name="_numEval" value="0"/>
+      <metadata name="_qualEval" value="None"/>
+    </intElements>
+    <intElements name="Shared room" id="111" linksSrc="117 130 131" type="Task" refs="112">
+      <metadata name="_addAggregate" value="disable"/>
+      <metadata name="_numEval" value="0"/>
+      <metadata name="_qualEval" value="None"/>
+    </intElements>
+    <intElements name="Private room" id="113" linksSrc="118 132 133" type="Task" refs="114">
+      <metadata name="_addAggregate" value="disable"/>
+      <metadata name="_numEval" value="0"/>
+      <metadata name="_qualEval" value="None"/>
+    </intElements>
+    <intElements name="Earn income" id="144" linksDest="178 179 184 1632 1633 1634 1635 1639 1952" type="Goal" importance="Medium" importanceQuantitative="50" refs="145">
+      <metadata name="_numEval" value="0"/>
+      <metadata name="_qualEval" value="None"/>
+    </intElements>
+    <intElements name="Improve healthcare" id="146" linksDest="180 182 183 1951" type="Goal" importance="Medium" importanceQuantitative="50" refs="147">
+      <metadata name="_numEval" value="50"/>
+      <metadata name="_qualEval" value="WeaklySatisfied"/>
+    </intElements>
+    <intElements name="Treat patients" id="148" linksDest="1627 1628 1629 1630" linksSrc="178 180 191" type="Goal" decompositionType="Or" refs="149">
+      <metadata name="_addAggregate" value="disable"/>
+      <metadata name="_numEval" value="100"/>
+      <metadata name="_qualEval" value="Satisfied"/>
+    </intElements>
+    <intElements name="Administer hospital" id="150" linksDest="174 175 176" linksSrc="179" type="Goal" decompositionType="Or" refs="151">
+      <metadata name="_addAggregate" value="disable"/>
+      <metadata name="_numEval" value="0"/>
+      <metadata name="_qualEval" value="None"/>
+    </intElements>
+    <intElements name="Administer admission" id="162" linksSrc="174 184 193" type="Task" refs="163">
+      <metadata name="_addAggregate" value="disable"/>
+      <metadata name="_numEval" value="0"/>
+      <metadata name="_qualEval" value="None"/>
+    </intElements>
+    <intElements name="Improve facilities" id="164" linksSrc="175 183" type="Task" refs="165">
+      <metadata name="_addAggregate" value="disable"/>
+      <metadata name="_numEval" value="0"/>
+      <metadata name="_qualEval" value="None"/>
+    </intElements>
+    <intElements name="Maintain hospital" id="166" linksSrc="176 182" type="Task" refs="167">
+      <metadata name="_addAggregate" value="disable"/>
+      <metadata name="_numEval" value="0"/>
+      <metadata name="_qualEval" value="None"/>
+    </intElements>
+    <intElements xsi:type="fm:Feature" name="Prescription" id="1413" linksSrc="1420 1630 1632" type="Task" refs="1414 1626">
+      <metadata name="_addAggregate" value="disable"/>
+      <metadata name="_numEval" value="0"/>
+      <metadata name="_qualEval" value="None"/>
+    </intElements>
+    <intElements name="Respond to Emergency" id="1648" linksDest="1948 1949" linksSrc="1951 1952" type="Goal" decompositionType="Xor" refs="1649">
+      <metadata name="_addAggregate" value="disable"/>
+      <metadata name="_numEval" value="100"/>
+      <metadata name="_qualEval" value="Satisfied"/>
+    </intElements>
+    <actors name="Patient" id="83" contRefs="84">
+      <metadata name="_numEval" value="0"/>
+      <metadata name="_qualEval" value="None"/>
+    </actors>
+    <actors name="Doctor" id="140" contRefs="141">
+      <metadata name="_numEval" value="25"/>
+      <metadata name="_qualEval" value="WeaklySatisfied"/>
+    </actors>
+    <links xsi:type="fm:MandatoryFMLink" name="Mandatory46" id="46" refs="//@urndef/@specDiagrams.2/@connections.0" dest="13" src="15" quantitativeContribution="50"/>
+    <links xsi:type="fm:MandatoryFMLink" name="Mandatory49" id="49" refs="//@urndef/@specDiagrams.2/@connections.1" dest="13" src="17" quantitativeContribution="50"/>
+    <links xsi:type="fm:OptionalFMLink" name="Optional51" id="51" refs="//@urndef/@specDiagrams.2/@connections.2" dest="13" src="19" quantitativeContribution="0"/>
+    <links xsi:type="fm:OptionalFMLink" name="Optional53" id="53" refs="//@urndef/@specDiagrams.2/@connections.3" dest="13" src="21" quantitativeContribution="0"/>
+    <links xsi:type="fm:OptionalFMLink" name="Optional61" id="61" refs="//@urndef/@specDiagrams.2/@connections.4" dest="13" src="55" quantitativeContribution="0"/>
     <links xsi:type="grl:Decomposition" name="Decomposition70" id="70" refs="//@urndef/@specDiagrams.2/@connections.5" dest="17" src="64"/>
     <links xsi:type="grl:Decomposition" name="Decomposition71" id="71" refs="//@urndef/@specDiagrams.2/@connections.6" dest="17" src="66"/>
     <links xsi:type="grl:Decomposition" name="Decomposition117" id="117" refs="//@urndef/@specDiagrams.0/@connections.0" dest="103" src="111"/>
@@ -97,8 +226,32 @@
     <links xsi:type="grl:Decomposition" name="Decomposition1949" id="1949" refs="//@urndef/@specDiagrams.0/@connections.42" dest="1648" src="66"/>
     <links xsi:type="grl:Contribution" name="Contribution1951" id="1951" refs="//@urndef/@specDiagrams.0/@connections.43" dest="146" src="1648"/>
     <links xsi:type="grl:Contribution" name="Contribution1952" id="1952" refs="//@urndef/@specDiagrams.0/@connections.44" dest="144" src="1648"/>
-    <groups name="StrategiesGroup5" id="5" strategies="6"/>
-    <strategies name="EvaluationStrategy6" id="6" author="Admin" group="5"/>
+    <groups name="Hospital Visit Strategies" id="5" strategies="6 1954"/>
+    <strategies name="Hospitalize" id="6" author="Admin" group="5">
+      <evaluations evaluation="100" qualitativeEvaluation="Satisfied" intElement="64">
+        <kpiEvalValueSet/>
+      </evaluations>
+      <evaluations evaluation="100" qualitativeEvaluation="Satisfied" intElement="29">
+        <kpiEvalValueSet/>
+      </evaluations>
+      <evaluations evaluation="100" qualitativeEvaluation="Satisfied" intElement="33">
+        <kpiEvalValueSet/>
+      </evaluations>
+      <evaluations evaluation="100" qualitativeEvaluation="Satisfied" intElement="19">
+        <kpiEvalValueSet/>
+      </evaluations>
+    </strategies>
+    <strategies name="Release" id="1954" author="CheukChuen" group="5">
+      <evaluations evaluation="100" qualitativeEvaluation="Satisfied" intElement="66">
+        <kpiEvalValueSet/>
+      </evaluations>
+      <evaluations evaluation="100" qualitativeEvaluation="Satisfied" intElement="31">
+        <kpiEvalValueSet/>
+      </evaluations>
+      <evaluations evaluation="100" qualitativeEvaluation="Satisfied" intElement="1413">
+        <kpiEvalValueSet/>
+      </evaluations>
+    </strategies>
     <impactModel/>
     <indicatorGroup name="Time" id="9" isRedesignCategory="true"/>
     <indicatorGroup name="Cost" id="10" isRedesignCategory="true"/>
@@ -118,8 +271,8 @@
     <responsibilities name="Wait for medication" id="1197" respRefs="1198"/>
     <responsibilities name="Receive medication" id="1199" respRefs="1200"/>
     <specDiagrams xsi:type="grl:GRLGraph" name="GRLGraph2" id="2">
-      <nodes xsi:type="grl:IntentionalElementRef" name="IntentionalElementRef88" id="88" x="1072" y="88" contRef="84" pred="//@urndef/@specDiagrams.0/@connections.16 //@urndef/@specDiagrams.0/@connections.17 //@urndef/@specDiagrams.0/@connections.18 //@urndef/@specDiagrams.0/@connections.19 //@urndef/@specDiagrams.0/@connections.20" def="87">
-        <metadata name="_height" value="52"/>
+      <nodes xsi:type="grl:IntentionalElementRef" name="IntentionalElementRef88" id="88" x="1071" y="78" contRef="84" pred="//@urndef/@specDiagrams.0/@connections.16 //@urndef/@specDiagrams.0/@connections.17 //@urndef/@specDiagrams.0/@connections.18 //@urndef/@specDiagrams.0/@connections.19 //@urndef/@specDiagrams.0/@connections.20" def="87">
+        <metadata name="_height" value="70"/>
         <metadata name="_width" value="110"/>
       </nodes>
       <nodes xsi:type="grl:IntentionalElementRef" name="IntentionalElementRef90" id="90" x="770" y="201" contRef="84" succ="//@urndef/@specDiagrams.0/@connections.16" pred="//@urndef/@specDiagrams.0/@connections.7 //@urndef/@specDiagrams.0/@connections.8" def="89">
@@ -170,8 +323,8 @@
         <metadata name="_height" value="52"/>
         <metadata name="_width" value="110"/>
       </nodes>
-      <nodes xsi:type="grl:IntentionalElementRef" name="IntentionalElementRef147" id="147" x="367" y="105" contRef="141" pred="//@urndef/@specDiagrams.0/@connections.26 //@urndef/@specDiagrams.0/@connections.27 //@urndef/@specDiagrams.0/@connections.28 //@urndef/@specDiagrams.0/@connections.43" def="146">
-        <metadata name="_height" value="52"/>
+      <nodes xsi:type="grl:IntentionalElementRef" name="IntentionalElementRef147" id="147" x="381" y="102" contRef="141" pred="//@urndef/@specDiagrams.0/@connections.26 //@urndef/@specDiagrams.0/@connections.27 //@urndef/@specDiagrams.0/@connections.28 //@urndef/@specDiagrams.0/@connections.43" def="146">
+        <metadata name="_height" value="76"/>
         <metadata name="_width" value="110"/>
       </nodes>
       <nodes xsi:type="grl:IntentionalElementRef" name="IntentionalElementRef149" id="149" x="140" y="238" contRef="141" succ="//@urndef/@specDiagrams.0/@connections.24 //@urndef/@specDiagrams.0/@connections.26" pred="//@urndef/@specDiagrams.0/@connections.30 //@urndef/@specDiagrams.0/@connections.32 //@urndef/@specDiagrams.0/@connections.33 //@urndef/@specDiagrams.0/@connections.34 //@urndef/@specDiagrams.0/@connections.35" def="148">
@@ -210,8 +363,8 @@
         <metadata name="_height" value="52"/>
         <metadata name="_width" value="110"/>
       </nodes>
-      <nodes xsi:type="grl:IntentionalElementRef" name="IntentionalElementRef1649" id="1649" x="317" y="464" contRef="141" succ="//@urndef/@specDiagrams.0/@connections.43 //@urndef/@specDiagrams.0/@connections.44" pred="//@urndef/@specDiagrams.0/@connections.41 //@urndef/@specDiagrams.0/@connections.42" def="1648">
-        <metadata name="_height" value="45"/>
+      <nodes xsi:type="grl:IntentionalElementRef" name="IntentionalElementRef1649" id="1649" x="317" y="452" contRef="141" succ="//@urndef/@specDiagrams.0/@connections.43 //@urndef/@specDiagrams.0/@connections.44" pred="//@urndef/@specDiagrams.0/@connections.41 //@urndef/@specDiagrams.0/@connections.42" def="1648">
+        <metadata name="_height" value="57"/>
         <metadata name="_width" value="110"/>
       </nodes>
       <nodes xsi:type="grl:IntentionalElementRef" name="IntentionalElementRef1861" id="1861" x="222" y="540" contRef="141" succ="//@urndef/@specDiagrams.0/@connections.41" def="64">
@@ -312,13 +465,13 @@
       <connections xsi:type="grl:LinkRef" source="167" target="147" link="182">
         <label deltaX="30" deltaY="-30"/>
         <bendpoints x="604" y="280"/>
-        <bendpoints x="571" y="208"/>
+        <bendpoints x="585" y="205"/>
       </connections>
       <connections xsi:type="grl:LinkRef" source="165" target="147" link="183">
         <label deltaX="30" deltaY="-30"/>
         <bendpoints x="640" y="442"/>
-        <bendpoints x="666" y="386"/>
-        <bendpoints x="604" y="194"/>
+        <bendpoints x="674" y="385"/>
+        <bendpoints x="618" y="191"/>
       </connections>
       <connections xsi:type="grl:LinkRef" source="163" target="145" link="184">
         <label deltaX="30" deltaY="-30"/>
@@ -370,31 +523,41 @@
     </specDiagrams>
     <specDiagrams xsi:type="ucm.map:UCMmap" name="UCMmap3" id="3">
       <nodes xsi:type="ucm.map:EndPoint" name="Go Home" id="233" x="977" y="315" pred="//@urndef/@specDiagrams.1/@connections.1">
+        <metadata name="_hits" value="0"/>
         <label/>
         <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
       </nodes>
       <nodes xsi:type="ucm.map:StartPoint" name="Go to Hospital" id="232" x="73" y="263" succ="//@urndef/@specDiagrams.1/@connections.0">
+        <metadata name="_hits" value="0"/>
         <label/>
         <precondition deltaX="40" deltaY="-17" label="" expression="true"/>
       </nodes>
       <nodes xsi:type="ucm.map:EndPoint" name="Get Hospitalized" id="244" x="770" y="76" contRef="1311" pred="//@urndef/@specDiagrams.1/@connections.3">
+        <metadata name="_hits" value="0"/>
         <label/>
         <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
       </nodes>
-      <nodes xsi:type="ucm.map:OrJoin" name="OrJoin245" id="245" x="813" y="308" contRef="1311" succ="//@urndef/@specDiagrams.1/@connections.1" pred="//@urndef/@specDiagrams.1/@connections.2 //@urndef/@specDiagrams.1/@connections.5 //@urndef/@specDiagrams.1/@connections.6 //@urndef/@specDiagrams.1/@connections.11"/>
+      <nodes xsi:type="ucm.map:OrJoin" name="OrJoin245" id="245" x="813" y="308" contRef="1311" succ="//@urndef/@specDiagrams.1/@connections.1" pred="//@urndef/@specDiagrams.1/@connections.2 //@urndef/@specDiagrams.1/@connections.5 //@urndef/@specDiagrams.1/@connections.6 //@urndef/@specDiagrams.1/@connections.11">
+        <metadata name="_hits" value="0"/>
+      </nodes>
       <nodes xsi:type="ucm.map:Stub" name="Admission" id="268" x="620" y="106" contRef="1311" succ="//@urndef/@specDiagrams.1/@connections.3" pred="//@urndef/@specDiagrams.1/@connections.7 //@urndef/@specDiagrams.1/@connections.13 //@urndef/@specDiagrams.1/@connections.15">
+        <metadata name="_hits" value="0"/>
         <label/>
       </nodes>
       <nodes xsi:type="ucm.map:Stub" name="Visit Hospital" id="270" x="223" y="262" contRef="1311" succ="//@urndef/@specDiagrams.1/@connections.7 //@urndef/@specDiagrams.1/@connections.8 //@urndef/@specDiagrams.1/@connections.9 //@urndef/@specDiagrams.1/@connections.10" pred="//@urndef/@specDiagrams.1/@connections.0">
+        <metadata name="_hits" value="0"/>
         <label/>
       </nodes>
       <nodes xsi:type="ucm.map:Stub" name="Appointment" id="291" x="489" y="305" contRef="1311" succ="//@urndef/@specDiagrams.1/@connections.4 //@urndef/@specDiagrams.1/@connections.11 //@urndef/@specDiagrams.1/@connections.15" pred="//@urndef/@specDiagrams.1/@connections.9" dynamic="true">
+        <metadata name="_hits" value="0"/>
         <label/>
       </nodes>
       <nodes xsi:type="ucm.map:Stub" name="Walk In" id="301" x="492" y="414" contRef="1311" succ="//@urndef/@specDiagrams.1/@connections.5 //@urndef/@specDiagrams.1/@connections.12" pred="//@urndef/@specDiagrams.1/@connections.10">
+        <metadata name="_hits" value="0"/>
         <label/>
       </nodes>
       <nodes xsi:type="ucm.map:Stub" name="Pharmacy" id="330" x="719" y="198" contRef="1311" succ="//@urndef/@specDiagrams.1/@connections.6" pred="//@urndef/@specDiagrams.1/@connections.4 //@urndef/@specDiagrams.1/@connections.12 //@urndef/@specDiagrams.1/@connections.14">
+        <metadata name="_hits" value="0"/>
         <label/>
         <bindings plugin="852">
           <in startPoint="1258" stubEntry="//@urndef/@specDiagrams.1/@connections.4"/>
@@ -405,6 +568,7 @@
         </bindings>
       </nodes>
       <nodes xsi:type="ucm.map:Stub" name="Emergency" id="272" x="490" y="224" contRef="1311" succ="//@urndef/@specDiagrams.1/@connections.2 //@urndef/@specDiagrams.1/@connections.13 //@urndef/@specDiagrams.1/@connections.14" pred="//@urndef/@specDiagrams.1/@connections.8" dynamic="true">
+        <metadata name="_hits" value="0"/>
         <label/>
         <bindings plugin="680">
           <in startPoint="681" stubEntry="//@urndef/@specDiagrams.1/@connections.8"/>
@@ -507,40 +671,58 @@
     </specDiagrams>
     <specDiagrams xsi:type="ucm.map:UCMmap" name="UCMmap680" id="680" parentStub="//@urndef/@specDiagrams.1/@nodes.9/@bindings.0">
       <nodes xsi:type="ucm.map:StartPoint" name="Enter Emergency Room" id="681" x="164" y="404" contRef="1339" succ="//@urndef/@specDiagrams.3/@connections.0" inBindings="//@urndef/@specDiagrams.1/@nodes.9/@bindings.0/@in.0">
+        <metadata name="_hits" value="0"/>
         <label/>
         <precondition deltaX="40" deltaY="-17" label="" expression="true"/>
       </nodes>
       <nodes xsi:type="ucm.map:Stub" name="See Triage Nurse" id="702" x="352" y="397" contRef="1339" succ="//@urndef/@specDiagrams.3/@connections.1 //@urndef/@specDiagrams.3/@connections.2" pred="//@urndef/@specDiagrams.3/@connections.0">
+        <metadata name="_hits" value="0"/>
         <label deltaX="52" deltaY="8"/>
       </nodes>
       <nodes xsi:type="ucm.map:RespRef" name="RespRef708" id="708" x="395" y="283" contRef="1339" succ="//@urndef/@specDiagrams.3/@connections.3" pred="//@urndef/@specDiagrams.3/@connections.2" respDef="707">
+        <metadata name="_hits" value="0"/>
         <label/>
       </nodes>
       <nodes xsi:type="ucm.map:EndPoint" name="Send Home" id="713" x="1025" y="284" contRef="1339" pred="//@urndef/@specDiagrams.3/@connections.14" outBindings="//@urndef/@specDiagrams.1/@nodes.9/@bindings.0/@out.0">
+        <metadata name="_hits" value="0"/>
         <label/>
         <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
       </nodes>
       <nodes xsi:type="ucm.map:RespRef" name="RespRef717" id="717" x="659" y="273" contRef="1339" succ="//@urndef/@specDiagrams.3/@connections.4" pred="//@urndef/@specDiagrams.3/@connections.5" respDef="716">
+        <metadata name="_hits" value="0"/>
         <label deltaX="28" deltaY="11"/>
       </nodes>
-      <nodes xsi:type="ucm.map:OrFork" name="OrFork731" id="731" x="480" y="271" contRef="1339" succ="//@urndef/@specDiagrams.3/@connections.5 //@urndef/@specDiagrams.3/@connections.6" pred="//@urndef/@specDiagrams.3/@connections.3"/>
+      <nodes xsi:type="ucm.map:OrFork" name="OrFork731" id="731" x="480" y="271" contRef="1339" succ="//@urndef/@specDiagrams.3/@connections.5 //@urndef/@specDiagrams.3/@connections.6" pred="//@urndef/@specDiagrams.3/@connections.3">
+        <metadata name="_hits" value="0"/>
+      </nodes>
       <nodes xsi:type="ucm.map:EndPoint" name="Admit" id="733" x="1011" y="144" contRef="1339" pred="//@urndef/@specDiagrams.3/@connections.13" outBindings="//@urndef/@specDiagrams.1/@nodes.9/@bindings.0/@out.1">
+        <metadata name="_hits" value="0"/>
         <label/>
         <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
       </nodes>
       <nodes xsi:type="ucm.map:Stub" name="Consult Doctor" id="734" x="678" y="144" contRef="1339" succ="//@urndef/@specDiagrams.3/@connections.7 //@urndef/@specDiagrams.3/@connections.9" pred="//@urndef/@specDiagrams.3/@connections.6">
+        <metadata name="_hits" value="0"/>
         <label/>
       </nodes>
       <nodes xsi:type="ucm.map:RespRef" name="RespRef737" id="737" x="876" y="285" contRef="1339" succ="//@urndef/@specDiagrams.3/@connections.8" pred="//@urndef/@specDiagrams.3/@connections.10" respDef="736">
+        <metadata name="_hits" value="0"/>
         <label/>
       </nodes>
-      <nodes xsi:type="ucm.map:OrJoin" name="OrJoin782" id="782" x="817" y="284" contRef="1339" succ="//@urndef/@specDiagrams.3/@connections.10" pred="//@urndef/@specDiagrams.3/@connections.4 //@urndef/@specDiagrams.3/@connections.9 //@urndef/@specDiagrams.3/@connections.11"/>
+      <nodes xsi:type="ucm.map:OrJoin" name="OrJoin782" id="782" x="817" y="284" contRef="1339" succ="//@urndef/@specDiagrams.3/@connections.10" pred="//@urndef/@specDiagrams.3/@connections.4 //@urndef/@specDiagrams.3/@connections.9 //@urndef/@specDiagrams.3/@connections.11">
+        <metadata name="_hits" value="0"/>
+      </nodes>
       <nodes xsi:type="ucm.map:Stub" name="Carry out Surgery or Procedure" id="784" x="514" y="439" contRef="1339" succ="//@urndef/@specDiagrams.3/@connections.11 //@urndef/@specDiagrams.3/@connections.12" pred="//@urndef/@specDiagrams.3/@connections.1">
+        <metadata name="_hits" value="0"/>
         <label deltaX="-9" deltaY="-67"/>
       </nodes>
-      <nodes xsi:type="ucm.map:OrJoin" name="OrJoin806" id="806" x="821" y="149" contRef="1339" succ="//@urndef/@specDiagrams.3/@connections.13" pred="//@urndef/@specDiagrams.3/@connections.7 //@urndef/@specDiagrams.3/@connections.12"/>
-      <nodes xsi:type="ucm.map:OrFork" name="OrFork813" id="813" x="923" y="289" contRef="1339" succ="//@urndef/@specDiagrams.3/@connections.14 //@urndef/@specDiagrams.3/@connections.15" pred="//@urndef/@specDiagrams.3/@connections.8"/>
+      <nodes xsi:type="ucm.map:OrJoin" name="OrJoin806" id="806" x="821" y="149" contRef="1339" succ="//@urndef/@specDiagrams.3/@connections.13" pred="//@urndef/@specDiagrams.3/@connections.7 //@urndef/@specDiagrams.3/@connections.12">
+        <metadata name="_hits" value="0"/>
+      </nodes>
+      <nodes xsi:type="ucm.map:OrFork" name="OrFork813" id="813" x="923" y="289" contRef="1339" succ="//@urndef/@specDiagrams.3/@connections.14 //@urndef/@specDiagrams.3/@connections.15" pred="//@urndef/@specDiagrams.3/@connections.8">
+        <metadata name="_hits" value="0"/>
+      </nodes>
       <nodes xsi:type="ucm.map:EndPoint" name="Go to Pharmacy" id="815" x="1025" y="458" contRef="1339" pred="//@urndef/@specDiagrams.3/@connections.15" outBindings="//@urndef/@specDiagrams.1/@nodes.9/@bindings.0/@out.2">
+        <metadata name="_hits" value="0"/>
         <label/>
         <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
       </nodes>
@@ -574,66 +756,94 @@
     </specDiagrams>
     <specDiagrams xsi:type="ucm.map:UCMmap" name="UCMmap852" id="852" parentStub="//@urndef/@specDiagrams.1/@nodes.8/@bindings.0">
       <nodes xsi:type="ucm.map:StartPoint" name="Prescription needed after walk-in" id="853" description="" x="137" y="255" contRef="1275" succ="//@urndef/@specDiagrams.4/@connections.0" inBindings="//@urndef/@specDiagrams.1/@nodes.8/@bindings.0/@in.1">
+        <metadata name="_hits" value="0"/>
         <label/>
         <precondition deltaX="40" deltaY="-17" label="" expression="true"/>
       </nodes>
       <nodes xsi:type="ucm.map:EndPoint" name="Exit Pharmacy" id="855" x="1323" y="254" contRef="1275" pred="//@urndef/@specDiagrams.4/@connections.20" outBindings="//@urndef/@specDiagrams.1/@nodes.8/@bindings.0/@out.0">
+        <metadata name="_hits" value="0"/>
         <label/>
         <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
       </nodes>
       <nodes xsi:type="ucm.map:RespRef" name="RespRef860" id="860" x="436" y="263" contRef="1275" succ="//@urndef/@specDiagrams.4/@connections.1" pred="//@urndef/@specDiagrams.4/@connections.22" respDef="859">
+        <metadata name="_hits" value="0"/>
         <label/>
       </nodes>
-      <nodes xsi:type="ucm.map:Timer" name="Wait in queue" id="1070" x="497" y="256" contRef="1275" succ="//@urndef/@specDiagrams.4/@connections.2 //@urndef/@specDiagrams.4/@connections.6" pred="//@urndef/@specDiagrams.4/@connections.1 //@urndef/@specDiagrams.4/@connections.5"/>
+      <nodes xsi:type="ucm.map:Timer" name="Wait in queue" id="1070" x="497" y="256" contRef="1275" succ="//@urndef/@specDiagrams.4/@connections.2 //@urndef/@specDiagrams.4/@connections.6" pred="//@urndef/@specDiagrams.4/@connections.1 //@urndef/@specDiagrams.4/@connections.5">
+        <metadata name="_hits" value="0"/>
+      </nodes>
       <nodes xsi:type="ucm.map:StartPoint" name="Number called" id="1073" x="497" y="400" contRef="1275" succ="//@urndef/@specDiagrams.4/@connections.3">
+        <metadata name="_hits" value="0"/>
         <label deltaX="-54" deltaY="24"/>
         <precondition deltaX="40" deltaY="-17" label="" expression="true"/>
       </nodes>
       <nodes xsi:type="ucm.map:EndPoint" name="" id="1075" x="497" y="256" contRef="1275" succ="//@urndef/@specDiagrams.4/@connections.4" pred="//@urndef/@specDiagrams.4/@connections.3">
+        <metadata name="_hits" value="0"/>
         <label/>
         <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
       </nodes>
       <nodes xsi:type="ucm.map:Connect" name="Connect1086" id="1086" x="497" y="256" contRef="1275" succ="//@urndef/@specDiagrams.4/@connections.5" pred="//@urndef/@specDiagrams.4/@connections.4"/>
       <nodes xsi:type="ucm.map:RespRef" name="RespRef1133" id="1133" x="563" y="91" contRef="1275" succ="//@urndef/@specDiagrams.4/@connections.7" pred="//@urndef/@specDiagrams.4/@connections.6" respDef="1132">
+        <metadata name="_hits" value="0"/>
         <label/>
       </nodes>
       <nodes xsi:type="ucm.map:RespRef" name="RespRef1139" id="1139" x="622" y="255" contRef="1275" succ="//@urndef/@specDiagrams.4/@connections.8" pred="//@urndef/@specDiagrams.4/@connections.2" respDef="1138">
+        <metadata name="_hits" value="0"/>
         <label deltaX="16" deltaY="15"/>
       </nodes>
-      <nodes xsi:type="ucm.map:OrFork" name="OrFork1157" id="1157" x="707" y="221" contRef="1275" succ="//@urndef/@specDiagrams.4/@connections.9 //@urndef/@specDiagrams.4/@connections.10" pred="//@urndef/@specDiagrams.4/@connections.8"/>
-      <nodes xsi:type="ucm.map:OrJoin" name="OrJoin1166" id="1166" x="921" y="222" contRef="1275" succ="//@urndef/@specDiagrams.4/@connections.11" pred="//@urndef/@specDiagrams.4/@connections.13 //@urndef/@specDiagrams.4/@connections.12"/>
+      <nodes xsi:type="ucm.map:OrFork" name="OrFork1157" id="1157" x="707" y="221" contRef="1275" succ="//@urndef/@specDiagrams.4/@connections.9 //@urndef/@specDiagrams.4/@connections.10" pred="//@urndef/@specDiagrams.4/@connections.8">
+        <metadata name="_hits" value="0"/>
+      </nodes>
+      <nodes xsi:type="ucm.map:OrJoin" name="OrJoin1166" id="1166" x="921" y="222" contRef="1275" succ="//@urndef/@specDiagrams.4/@connections.11" pred="//@urndef/@specDiagrams.4/@connections.13 //@urndef/@specDiagrams.4/@connections.12">
+        <metadata name="_hits" value="0"/>
+      </nodes>
       <nodes xsi:type="ucm.map:RespRef" name="RespRef1174" id="1174" x="813" y="305" contRef="1275" succ="//@urndef/@specDiagrams.4/@connections.12" pred="//@urndef/@specDiagrams.4/@connections.10" respDef="1173">
+        <metadata name="_hits" value="0"/>
         <label deltaX="-3" deltaY="-48"/>
       </nodes>
       <nodes xsi:type="ucm.map:RespRef" name="RespRef1176" id="1176" x="811" y="177" contRef="1275" succ="//@urndef/@specDiagrams.4/@connections.13" pred="//@urndef/@specDiagrams.4/@connections.9" respDef="1175">
+        <metadata name="_hits" value="0"/>
         <label/>
       </nodes>
       <nodes xsi:type="ucm.map:WaitingPlace" name="" id="1181" x="1082" y="256" contRef="1275" succ="//@urndef/@specDiagrams.4/@connections.14" pred="//@urndef/@specDiagrams.4/@connections.18 //@urndef/@specDiagrams.4/@connections.17">
+        <metadata name="_hits" value="0"/>
         <label/>
       </nodes>
       <nodes xsi:type="ucm.map:StartPoint" name="Medication prepared" id="1183" x="1084" y="398" contRef="1275" succ="//@urndef/@specDiagrams.4/@connections.15">
+        <metadata name="_hits" value="0"/>
         <label deltaX="-72" deltaY="25"/>
         <precondition deltaX="40" deltaY="-17" label="" expression="true"/>
       </nodes>
       <nodes xsi:type="ucm.map:EndPoint" name="" id="1185" x="1082" y="256" contRef="1275" succ="//@urndef/@specDiagrams.4/@connections.16" pred="//@urndef/@specDiagrams.4/@connections.15">
+        <metadata name="_hits" value="0"/>
         <label/>
         <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
       </nodes>
       <nodes xsi:type="ucm.map:Connect" name="Connect1196" id="1196" x="1082" y="256" contRef="1275" succ="//@urndef/@specDiagrams.4/@connections.17" pred="//@urndef/@specDiagrams.4/@connections.16"/>
       <nodes xsi:type="ucm.map:RespRef" name="RespRef1198" id="1198" x="1011" y="253" contRef="1275" succ="//@urndef/@specDiagrams.4/@connections.18" pred="//@urndef/@specDiagrams.4/@connections.11" respDef="1197">
+        <metadata name="_hits" value="0"/>
         <label/>
       </nodes>
       <nodes xsi:type="ucm.map:RespRef" name="RespRef1200" id="1200" x="1155" y="259" contRef="1275" succ="//@urndef/@specDiagrams.4/@connections.19" pred="//@urndef/@specDiagrams.4/@connections.14" respDef="1199">
+        <metadata name="_hits" value="0"/>
         <label/>
       </nodes>
-      <nodes xsi:type="ucm.map:OrJoin" name="OrJoin1207" id="1207" x="1249" y="257" contRef="1275" succ="//@urndef/@specDiagrams.4/@connections.20" pred="//@urndef/@specDiagrams.4/@connections.19 //@urndef/@specDiagrams.4/@connections.21"/>
-      <nodes xsi:type="ucm.map:EmptyPoint" name="EmptyPoint1211" id="1211" x="1053" y="99" contRef="1275" succ="//@urndef/@specDiagrams.4/@connections.21" pred="//@urndef/@specDiagrams.4/@connections.7"/>
-      <nodes xsi:type="ucm.map:OrJoin" name="OrJoin1256" id="1256" x="272" y="256" contRef="1275" succ="//@urndef/@specDiagrams.4/@connections.22" pred="//@urndef/@specDiagrams.4/@connections.0 //@urndef/@specDiagrams.4/@connections.23 //@urndef/@specDiagrams.4/@connections.24"/>
+      <nodes xsi:type="ucm.map:OrJoin" name="OrJoin1207" id="1207" x="1249" y="257" contRef="1275" succ="//@urndef/@specDiagrams.4/@connections.20" pred="//@urndef/@specDiagrams.4/@connections.19 //@urndef/@specDiagrams.4/@connections.21">
+        <metadata name="_hits" value="0"/>
+      </nodes>
+      <nodes xsi:type="ucm.map:EmptyPoint" name="EmptyPoint1211" id="1211" x="1053" y="99" contRef="1275" succ="//@urndef/@specDiagrams.4/@connections.21" pred="//@urndef/@specDiagrams.4/@connections.7">
+        <metadata name="_hits" value="0"/>
+      </nodes>
+      <nodes xsi:type="ucm.map:OrJoin" name="OrJoin1256" id="1256" x="272" y="256" contRef="1275" succ="//@urndef/@specDiagrams.4/@connections.22" pred="//@urndef/@specDiagrams.4/@connections.0 //@urndef/@specDiagrams.4/@connections.23 //@urndef/@specDiagrams.4/@connections.24">
+        <metadata name="_hits" value="0"/>
+      </nodes>
       <nodes xsi:type="ucm.map:StartPoint" name="Prescription needed after appointment" id="1258" x="172" y="119" contRef="1275" succ="//@urndef/@specDiagrams.4/@connections.23" inBindings="//@urndef/@specDiagrams.1/@nodes.8/@bindings.0/@in.0">
+        <metadata name="_hits" value="0"/>
         <label/>
         <precondition deltaX="40" deltaY="-17" label="" expression="true"/>
       </nodes>
       <nodes xsi:type="ucm.map:StartPoint" name="Prescription needed after emergency" id="1262" x="177" y="402" contRef="1275" succ="//@urndef/@specDiagrams.4/@connections.24" inBindings="//@urndef/@specDiagrams.1/@nodes.8/@bindings.0/@in.2">
+        <metadata name="_hits" value="0"/>
         <label deltaX="5" deltaY="-50"/>
         <precondition deltaX="40" deltaY="-17" label="" expression="true"/>
       </nodes>
