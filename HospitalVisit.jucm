@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
-<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fm="http:///fm.ecore" xmlns:grl="http:///grl.ecore" xmlns:ucm.map="http:///ucm/map.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="Admin" created="September 29, 2016 6:00:13 PM EDT" modified="October 6, 2016 4:06:48 PM EDT" specVersion="63" urnVersion="1.27" nextGlobalID="2753">
+<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fm="http:///fm.ecore" xmlns:grl="http:///grl.ecore" xmlns:ucm.map="http:///ucm/map.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="Admin" created="September 29, 2016 6:00:13 PM EDT" modified="October 6, 2016 4:19:20 PM EDT" specVersion="64" urnVersion="1.27" nextGlobalID="2753">
   <ucmspec>
     <scenarioGroups name="Hospital Visit Scenarios" id="7">
       <scenarios name="Emergency" id="8">
@@ -19,10 +19,18 @@
         <initializations value="false" variable="2563"/>
         <startPoints enabled="true" startPoint="232"/>
         <endPoints enabled="true" mandatory="true" endPoint="233"/>
+        <endPoints enabled="true" mandatory="true" endPoint="2444"/>
       </scenarios>
     </scenarioGroups>
     <scenarioGroups name="Base Scenario" id="2546">
-      <scenarios name="ScenarioDef2736" id="2736"/>
+      <scenarios name="Treatment: Consultation" id="2736">
+        <initializations value="Treatment" variable="2051"/>
+        <initializations value="false" variable="2463"/>
+        <initializations value="false" variable="2502"/>
+        <startPoints enabled="true" startPoint="232"/>
+        <endPoints enabled="true" mandatory="true" endPoint="233"/>
+        <endPoints enabled="true" mandatory="true" endPoint="2748"/>
+      </scenarios>
     </scenarioGroups>
     <variables name="ServiceRequested" id="2051" type="enumeration" enumerationType="2049"/>
     <variables name="Severe" id="2077"/>
@@ -31,12 +39,14 @@
     <variables name="NeedMedicine" id="2463"/>
     <variables name="NeedToStay" id="2502"/>
     <variables name="Insured" id="2563"/>
-    <enumerationTypes name="ServiceRequested" id="2049" values="Admission,Emergency,Appointment,Walk_In" instances="2051"/>
+    <enumerationTypes name="ServiceRequested" id="2049" values="Admission,Emergency,Treatment,Walk_In" instances="2051"/>
   </ucmspec>
   <grlspec>
     <intElements xsi:type="fm:Feature" name="Hospital Visit" id="13" linksDest="46 2669 51 53 61" type="Task" refs="14"/>
     <intElements xsi:type="fm:Feature" name="Treatment" id="15" linksDest="1417 1418 1419 1420" linksSrc="46" type="Task" decompositionType="Or" refs="24">
       <metadata name="_addAggregate" value="disable"/>
+      <metadata name="_autoSelected" value="20161006-161651355"/>
+      <metadata name="_userSetEvaluationWarning" value="100 != 0"/>
     </intElements>
     <intElements xsi:type="fm:Feature" name="Emergency" id="17" linksDest="70 71" linksSrc="2669" type="Task" decompositionType="Xor" refs="18">
       <metadata name="_addAggregate" value="disable"/>
@@ -517,23 +527,23 @@
       </connections>
     </specDiagrams>
     <specDiagrams xsi:type="ucm.map:UCMmap" name="Scenario Model - Root" id="3">
-      <nodes xsi:type="ucm.map:EndPoint" name="Go Home" id="233" x="1099" y="351" pred="//@urndef/@specDiagrams.1/@connections.30" scenarioEndPoints="//@ucmspec/@scenarioGroups.0/@scenarios.1/@endPoints.0">
+      <nodes xsi:type="ucm.map:EndPoint" name="Go Home" id="233" x="1099" y="351" pred="//@urndef/@specDiagrams.1/@connections.30" scenarioEndPoints="//@ucmspec/@scenarioGroups.0/@scenarios.1/@endPoints.0 //@ucmspec/@scenarioGroups.1/@scenarios.0/@endPoints.0">
         <label/>
         <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
       </nodes>
-      <nodes xsi:type="ucm.map:StartPoint" name="Go to Hospital" id="232" x="73" y="263" succ="//@urndef/@specDiagrams.1/@connections.0" scenarioStartPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@startPoints.0 //@ucmspec/@scenarioGroups.0/@scenarios.1/@startPoints.0">
+      <nodes xsi:type="ucm.map:StartPoint" name="Go to Hospital" id="232" x="73" y="263" succ="//@urndef/@specDiagrams.1/@connections.0" scenarioStartPoints="//@ucmspec/@scenarioGroups.0/@scenarios.0/@startPoints.0 //@ucmspec/@scenarioGroups.0/@scenarios.1/@startPoints.0 //@ucmspec/@scenarioGroups.1/@scenarios.0/@startPoints.0">
         <label/>
         <precondition deltaX="40" deltaY="-17" label="" expression="true"/>
       </nodes>
       <nodes xsi:type="ucm.map:OrJoin" name="OrJoin245" id="245" x="908" y="336" contRef="1311" succ="//@urndef/@specDiagrams.1/@connections.1" pred="//@urndef/@specDiagrams.1/@connections.22 //@urndef/@specDiagrams.1/@connections.24 //@urndef/@specDiagrams.1/@connections.29 //@urndef/@specDiagrams.1/@connections.23"/>
-      <nodes xsi:type="ucm.map:Stub" name="Appointment" id="291" x="555" y="340" contRef="1311" succ="//@urndef/@specDiagrams.1/@connections.3 //@urndef/@specDiagrams.1/@connections.6 //@urndef/@specDiagrams.1/@connections.10" pred="//@urndef/@specDiagrams.1/@connections.18" dynamic="true">
+      <nodes xsi:type="ucm.map:Stub" name="Treatment" id="291" x="555" y="340" contRef="1311" succ="//@urndef/@specDiagrams.1/@connections.3 //@urndef/@specDiagrams.1/@connections.6 //@urndef/@specDiagrams.1/@connections.10" pred="//@urndef/@specDiagrams.1/@connections.18" dynamic="true">
         <label deltaX="41" deltaY="4"/>
         <bindings plugin="2738">
           <in startPoint="2740" stubEntry="//@urndef/@specDiagrams.1/@connections.18"/>
           <out endPoint="2741" stubExit="//@urndef/@specDiagrams.1/@connections.3"/>
           <out endPoint="2748" stubExit="//@urndef/@specDiagrams.1/@connections.6"/>
           <out endPoint="2742" stubExit="//@urndef/@specDiagrams.1/@connections.10"/>
-          <precondition label="" expression="true"/>
+          <precondition label="" expression="true" description=""/>
         </bindings>
       </nodes>
       <nodes xsi:type="ucm.map:Stub" name="Pharmacy" id="330" x="832" y="219" contRef="1311" succ="//@urndef/@specDiagrams.1/@connections.5" pred="//@urndef/@specDiagrams.1/@connections.26 //@urndef/@specDiagrams.1/@connections.25 //@urndef/@specDiagrams.1/@connections.21">
@@ -617,7 +627,7 @@
         <condition deltaX="30" deltaY="40" label="Admission" expression="ServiceRequested == Admission" description=""/>
       </connections>
       <connections xsi:type="ucm.map:NodeConnection" source="2010" target="2619">
-        <condition deltaX="-14" deltaY="21" label="Appointment" expression="ServiceRequested == Appointment" description=""/>
+        <condition deltaX="-14" deltaY="21" label="Treatment" expression="ServiceRequested == Treatment" description=""/>
       </connections>
       <connections xsi:type="ucm.map:NodeConnection" source="2010" target="2620">
         <condition deltaX="14" deltaY="-23" label="Walk_in" expression="ServiceRequested == Walk_in" description=""/>
@@ -993,7 +1003,7 @@
         <label/>
         <precondition deltaX="40" deltaY="-17" label="" expression="true"/>
       </nodes>
-      <nodes xsi:type="ucm.map:EndPoint" name="Go to Pharmacy" id="2444" x="513" y="205" contRef="2554" pred="//@urndef/@specDiagrams.6/@connections.1" outBindings="//@urndef/@specDiagrams.1/@nodes.9/@bindings.0/@out.0">
+      <nodes xsi:type="ucm.map:EndPoint" name="Go to Pharmacy" id="2444" x="513" y="205" contRef="2554" pred="//@urndef/@specDiagrams.6/@connections.1" outBindings="//@urndef/@specDiagrams.1/@nodes.9/@bindings.0/@out.0" scenarioEndPoints="//@ucmspec/@scenarioGroups.0/@scenarios.1/@endPoints.1">
         <label deltaX="12" deltaY="7"/>
         <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
       </nodes>
@@ -1027,7 +1037,7 @@
         <label deltaX="12" deltaY="7"/>
         <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
       </nodes>
-      <nodes xsi:type="ucm.map:EndPoint" name="Go Home" id="2748" x="522" y="389" contRef="2743" pred="//@urndef/@specDiagrams.7/@connections.3" outBindings="//@urndef/@specDiagrams.1/@nodes.3/@bindings.0/@out.1">
+      <nodes xsi:type="ucm.map:EndPoint" name="Go Home" id="2748" x="522" y="389" contRef="2743" pred="//@urndef/@specDiagrams.7/@connections.3" outBindings="//@urndef/@specDiagrams.1/@nodes.3/@bindings.0/@out.1" scenarioEndPoints="//@ucmspec/@scenarioGroups.1/@scenarios.0/@endPoints.1">
         <label deltaX="-18" deltaY="6"/>
         <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
       </nodes>
@@ -1049,7 +1059,7 @@
     <components name="Hospital" id="1310" contRefs="1311"/>
     <components name="Emergency" id="1338" contRefs="1339"/>
     <components name="Admission" id="2549" contRefs="2550"/>
-    <components name="Appointment" id="2553" contRefs="2554 2743"/>
+    <components name="Treatment" id="2553" contRefs="2554 2743"/>
   </urndef>
   <metadata name="_Use0to100EvaluationRange" value="false"/>
 </urn:URNspec>
